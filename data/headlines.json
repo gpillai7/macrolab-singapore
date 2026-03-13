@@ -1,0 +1,26 @@
+{
+  "gdp": {
+    "value": "2.7%",
+    "status": "Expansion"
+  },
+  "nodx": {
+    "value": "5.1%",
+    "status": "Growth"
+  },
+  "inflation": {
+    "value": "3.2%",
+    "status": "Sticky"
+  },
+  "unemployment": {
+    "value": "2.0%",
+    "status": "Stable"
+  },
+  "pmi": {
+    "value": "50.8",
+    "status": "Expansion"
+  },
+  "financial": {
+    "value": "Neutral",
+    "status": "Watch"
+  }
+}
