@@ -1,43 +1,129 @@
-<section class="headline-strip" aria-label="Headline indicators">
-  <article class="headline-tile">
-    <span class="headline-label">GDP Growth</span>
-    <strong class="headline-value" id="gdp-value">--</strong>
-    <span class="headline-delta up" id="gdp-status">Loading</span>
-    <small class="headline-source">QoQ / YoY placeholder</small>
-  </article>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singapore Snapshot | MacroLab Singapore</title>
+  <meta name="description" content="Singapore Snapshot dashboard summarizing key economic indicators shaping Singapore's economy.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-  <article class="headline-tile">
-    <span class="headline-label">NODX</span>
-    <strong class="headline-value" id="nodx-value">--</strong>
-    <span class="headline-delta up" id="nodx-status">Loading</span>
-    <small class="headline-source">EnterpriseSG placeholder</small>
-  </article>
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">MacroLab Singapore</h1>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="snapshot.html">Singapore Snapshot</a>
+    </nav>
+  </div>
+</header>
 
-  <article class="headline-tile">
-    <span class="headline-label">Core Inflation</span>
-    <strong class="headline-value" id="inflation-value">--</strong>
-    <span class="headline-delta down" id="inflation-status">Loading</span>
-    <small class="headline-source">MAS / SingStat placeholder</small>
-  </article>
-
-  <article class="headline-tile">
-    <span class="headline-label">Unemployment</span>
-    <strong class="headline-value" id="unemployment-value">--</strong>
-    <span class="headline-delta flat" id="unemployment-status">Loading</span>
-    <small class="headline-source">Labour market placeholder</small>
-  </article>
-
-  <article class="headline-tile">
-    <span class="headline-label">Manufacturing PMI</span>
-    <strong class="headline-value" id="pmi-value">--</strong>
-    <span class="headline-delta flat" id="pmi-status">Loading</span>
-    <small class="headline-source">PMI placeholder</small>
-  </article>
-
-  <article class="headline-tile">
-    <span class="headline-label">Financial Conditions</span>
-    <strong class="headline-value" id="financial-value">--</strong>
-    <span class="headline-delta watch" id="financial-status">Loading</span>
-    <small class="headline-source">Rates / SGD proxy</small>
-  </article>
+<section class="page-header">
+  <div class="container">
+    <h2>Singapore Economic Snapshot</h2>
+    <p>
+      A real-time overview of the most important macroeconomic indicators shaping Singapore’s economy.
+    </p>
+  </div>
 </section>
+
+<section class="headline-strip-section">
+  <div class="container headline-strip">
+
+    <article class="headline-tile">
+      <span class="headline-label">GDP Growth</span>
+      <strong class="headline-value" id="gdp-value">--</strong>
+      <span class="headline-delta up" id="gdp-status">Loading</span>
+      <small class="headline-source">QoQ / YoY placeholder</small>
+    </article>
+
+    <article class="headline-tile">
+      <span class="headline-label">NODX</span>
+      <strong class="headline-value" id="nodx-value">--</strong>
+      <span class="headline-delta up" id="nodx-status">Loading</span>
+      <small class="headline-source">EnterpriseSG placeholder</small>
+    </article>
+
+    <article class="headline-tile">
+      <span class="headline-label">Core Inflation</span>
+      <strong class="headline-value" id="inflation-value">--</strong>
+      <span class="headline-delta down" id="inflation-status">Loading</span>
+      <small class="headline-source">MAS / SingStat placeholder</small>
+    </article>
+
+    <article class="headline-tile">
+      <span class="headline-label">Unemployment</span>
+      <strong class="headline-value" id="unemployment-value">--</strong>
+      <span class="headline-delta flat" id="unemployment-status">Loading</span>
+      <small class="headline-source">Labour market placeholder</small>
+    </article>
+
+    <article class="headline-tile">
+      <span class="headline-label">Manufacturing PMI</span>
+      <strong class="headline-value" id="pmi-value">--</strong>
+      <span class="headline-delta flat" id="pmi-status">Loading</span>
+      <small class="headline-source">PMI placeholder</small>
+    </article>
+
+    <article class="headline-tile">
+      <span class="headline-label">Financial Conditions</span>
+      <strong class="headline-value" id="financial-value">--</strong>
+      <span class="headline-delta watch" id="financial-status">Loading</span>
+      <small class="headline-source">Rates / SGD proxy</small>
+    </article>
+
+  </div>
+</section>
+
+<section class="snapshot-grid">
+  <div class="container">
+
+    <div class="indicator-card">
+      <h3>GDP Growth</h3>
+      <p class="indicator-value">Loading...</p>
+      <p class="indicator-source">Source: SingStat / MTI</p>
+    </div>
+
+    <div class="indicator-card">
+      <h3>Inflation (CPI)</h3>
+      <p class="indicator-value">Loading...</p>
+      <p class="indicator-source">Source: MAS / SingStat</p>
+    </div>
+
+    <div class="indicator-card">
+      <h3>Unemployment</h3>
+      <p class="indicator-value">Loading...</p>
+      <p class="indicator-source">Source: MOM</p>
+    </div>
+
+    <div class="indicator-card">
+      <h3>Exports</h3>
+      <p class="indicator-value">Loading...</p>
+      <p class="indicator-source">Source: Enterprise Singapore</p>
+    </div>
+
+    <div class="indicator-card">
+      <h3>Manufacturing</h3>
+      <p class="indicator-value">Loading...</p>
+      <p class="indicator-source">Source: EDB</p>
+    </div>
+
+    <div class="indicator-card">
+      <h3>Interest Rates</h3>
+      <p class="indicator-value">Loading...</p>
+      <p class="indicator-source">Source: MAS</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 MacroLab Singapore</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
