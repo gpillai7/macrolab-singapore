@@ -1,37 +1,33 @@
-{
-  "gdp": {
-    "label": "GDP Growth",
-    "value": "2.8%",
-    "status": "Expanding"
-  },
+async function loadSnapshotData() {
+  try {
+    const response = await fetch("data/singapore_snapshot.json");
 
-  "nodx": {
-    "label": "NODX",
-    "value": "+3.2%",
-    "status": "Rebounding"
-  },
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
 
-  "inflation": {
-    "label": "Core Inflation",
-    "value": "3.1%",
-    "status": "Easing"
-  },
+    const data = await response.json();
 
-  "unemployment": {
-    "label": "Unemployment",
-    "value": "2.0%",
-    "status": "Stable"
-  },
+    document.getElementById("gdp-value").textContent = data.gdp.value;
+    document.getElementById("gdp-status").textContent = data.gdp.status;
 
-  "pmi": {
-    "label": "Manufacturing PMI",
-    "value": "50.1",
-    "status": "Neutral"
-  },
+    document.getElementById("nodx-value").textContent = data.nodx.value;
+    document.getElementById("nodx-status").textContent = data.nodx.status;
 
-  "financial": {
-    "label": "Financial Conditions",
-    "value": "Tight",
-    "status": "Watch"
+    document.getElementById("inflation-value").textContent = data.inflation.value;
+    document.getElementById("inflation-status").textContent = data.inflation.status;
+
+    document.getElementById("unemployment-value").textContent = data.unemployment.value;
+    document.getElementById("unemployment-status").textContent = data.unemployment.status;
+
+    document.getElementById("pmi-value").textContent = data.pmi.value;
+    document.getElementById("pmi-status").textContent = data.pmi.status;
+
+    document.getElementById("financial-value").textContent = data.financial.value;
+    document.getElementById("financial-status").textContent = data.financial.status;
+  } catch (error) {
+    console.error("Failed to load snapshot data:", error);
   }
 }
+
+document.addEventListener("DOMContentLoaded", loadSnapshotData);
