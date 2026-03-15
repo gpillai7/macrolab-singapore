@@ -1,0 +1,15 @@
+import { z } from 'zod';
+export const shockSchema = z.object({ id: z.string(), name: z.string(), category: z.string(), level: z.enum(['High', 'Elevated', 'Moderate', 'Low']), transmissionChannel: z.string(), affectedIndicators: z.array(z.string()), sensitiveSectors: z.array(z.string()), implication: z.string(), updatedAt: z.string() });
+export const channelSchema = z.object({ id: z.string(), title: z.string(), summary: z.string(), indicators: z.array(z.string()), macroVariables: z.array(z.string()), sectors: z.array(z.string()) });
+export const sectorExposureSchema = z.object({ sector: z.string(), exposure: z.number().min(0).max(100), tag: z.string(), outlook: z.string(), drivers: z.array(z.string()) });
+export const insightSchema = z.object({ id: z.string(), title: z.string(), summary: z.string(), evidence: z.array(z.string()), audience: z.array(z.string()), updatedAt: z.string() });
+export const indicatorSchema = z.object({ code: z.string(), name: z.string(), layer: z.enum(['Global Drivers', 'Transmission Channels', 'Macro Regime', 'Sector Exposure', 'Amplifiers & Buffers', 'Shock Tracker']), type: z.string(), frequency: z.string(), source: z.string(), purpose: z.string() });
+export const macroRegimeSchema = z.object({ label: z.string(), summary: z.string(), posture: z.enum(['Supportive', 'Neutral', 'Cautious', 'Defensive']), components: z.array(z.object({ label: z.string(), score: z.number().min(0).max(100), signal: z.string() })), updatedAt: z.string() });
+export const stressIndexSchema = z.object({ value: z.number().min(0).max(100), status: z.enum(['Low', 'Guarded', 'Elevated', 'High']), components: z.array(z.object({ label: z.string(), value: z.number().min(0).max(100), weight: z.number().min(0).max(1) })), updatedAt: z.string() });
+export type Shock = z.infer<typeof shockSchema>;
+export type TransmissionChannel = z.infer<typeof channelSchema>;
+export type SectorExposure = z.infer<typeof sectorExposureSchema>;
+export type Insight = z.infer<typeof insightSchema>;
+export type Indicator = z.infer<typeof indicatorSchema>;
+export type MacroRegime = z.infer<typeof macroRegimeSchema>;
+export type StressIndex = z.infer<typeof stressIndexSchema>;

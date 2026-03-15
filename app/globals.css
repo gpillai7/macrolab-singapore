@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  background-image: radial-gradient(circle at top, rgba(239, 68, 68, 0.12), transparent 32%), linear-gradient(180deg, #020617 0%, #020617 100%);
+}
+.container-shell { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+.panel { @apply rounded-3xl border border-slate-800/90 bg-slate-900/70 shadow-panel backdrop-blur; }
+.kicker { @apply text-xs font-medium uppercase tracking-[0.24em] text-slate-400; }
+.metric-value { @apply text-3xl font-semibold tracking-tight text-white; }
+.data-table { @apply w-full border-separate border-spacing-0 overflow-hidden rounded-2xl; }
+.data-table th { @apply border-b border-slate-800 bg-slate-950/80 px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.2em] text-slate-400; }
+.data-table td { @apply border-b border-slate-800/80 px-4 py-3 align-top text-sm text-slate-200; }
